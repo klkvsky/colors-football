@@ -81,31 +81,32 @@
 				}}
 			/>
 
-			<div
-				class={`absolute top-full left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top transition-all duration-500 ease-in-out px-[8px] flex flex-col gap-[12px] pb-[8px] text-left overflow-hidden text-[14px] font-black z-[100] shadow-md ${
-					isSearchOpen
-						? 'max-h-[calc(2ch+24px+8)] delay-200 opacity-100'
-						: 'max-h-[0px]  pointer-events-none opacity-0'
-				}`}
-			>
-				<div class="w-full h-[.6px] bg-neutral-300 mt-[8px]" />
+			{#if serachResult.length > 0}
+				<div
+					class={`absolute top-full left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top transition-all duration-500 ease-in-out px-[8px] flex flex-col gap-[12px] pb-[8px] text-left overflow-hidden text-[14px] font-black z-[100] shadow-md ${
+						isSearchOpen
+							? 'max-h-[calc(2ch+24px+8)] delay-200 opacity-100'
+							: 'max-h-[0px]  pointer-events-none opacity-0'
+					}`}
+				>
+					<div class="w-full h-[.6px] bg-neutral-300 mt-[8px]" />
+					{#each serachResult as result}
+						<a href={result.id} class="flex flex-row items-center gap-[12px]">
+							<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
+								<img
+									src={`./logos/${result.logo}`}
+									alt={result.title}
+									class="w-[30px] h-[30px] object-contain"
+								/>
+							</div>
 
-				{#each serachResult as result}
-					<a href={result.id} class="flex flex-row items-center gap-[12px]">
-						<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
-							<img
-								src={`./logos/${result.logo}`}
-								alt={result.title}
-								class="w-[30px] h-[30px] object-contain"
-							/>
-						</div>
-
-						<p class="font-black placeholder:text-neutral-600 text-[16px] outline-none">
-							{result.title}
-						</p>
-					</a>
-				{/each}
-			</div>
+							<p class="font-black placeholder:text-neutral-600 text-[16px] outline-none">
+								{result.title}
+							</p>
+						</a>
+					{/each}
+				</div>
+			{/if}
 		</label>
 
 		<div
