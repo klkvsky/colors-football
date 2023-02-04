@@ -1,11 +1,38 @@
-<li class="bg-white border-[0.6px] border-neutral-300 p-[8px] flex-col rounded-[10px]">
-	<p class="font-black text-neutral-900 text-[16px]">Premier League</p>
-	<div
-		class="flex flex-row items-center h-[16px] w-full rounded-[4px] overflow-hidden mt-[12px] border-[0.6px] border-neutral-300]"
-	>
-		<div class="h-full bg-[#E20613] w-full" />
-		<div class="h-full bg-white w-full" />
-		<div class="h-full bg-yellow-500 w-full" />
-		<div class="h-full bg-orange-500 w-full" />
-	</div>
-</li>
+<script lang="ts">
+	interface FootballClub {
+		id: string;
+		title: string;
+		logo: string;
+		full_name: string;
+		nicknames: string[];
+		founded: number;
+		ground: string;
+		ground_capacity: number;
+		league: string;
+		links: {
+			url: string;
+			title: string;
+		};
+		colors: {
+			hex: string;
+			title: string;
+		}[];
+	}
+
+	export let team: FootballClub;
+</script>
+
+{#if team}
+	<a href={team.id}>
+		<li class="bg-white border-[0.6px] border-neutral-300 p-[8px] flex-col rounded-[10px]">
+			<p class="font-black text-neutral-900 text-[16px]">{team.title}</p>
+			<div
+				class="flex flex-row items-center h-[16px] w-full rounded-[4px] overflow-hidden mt-[12px] border-[0.6px] border-neutral-300]"
+			>
+				{#each team.colors as color}
+					<div class="h-full w-full" style={`background-color: ${color.hex}`} />
+				{/each}
+			</div>
+		</li>
+	</a>
+{/if}

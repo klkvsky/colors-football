@@ -1,0 +1,151 @@
+[
+	{
+		"id": "1",
+		"title": "West Ham",
+		"logo": "West_Ham.webp",
+		"full_name": "West Ham United Football Club",
+		"nicknames": ["The Hammers", "The Irons", "The Academy"],
+		"founded": 1895,
+		"ground": "Boleyn Ground",
+		"ground_capacity": 35000,
+		"league": "test League",
+		"links": [
+			{
+				"url": "http://www.arsenal.com",
+				"title": "website"
+			},
+			{
+				"url": "https://twitter.com/Arsenal",
+				"title": "twitter"
+			},
+			{
+				"url": "https://www.facebook.com/Arsenal",
+				"title": "facebook"
+			},
+			{
+				"url": "https://www.instagram.com/arsenal/",
+				"title": "instagram"
+			},
+			{
+				"url": "https://www.youtube.com/user/Arsenal",
+				"title": "youtube"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#7A263A",
+				"title": "home"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "away"
+			}
+		]
+	},
+	{
+		"id": "2",
+		"title": "Arsenal",
+		"logo": "Arsenal.png",
+		"full_name": "Arsenal Football Club",
+		"nicknames": ["The Gunners", "The Gunners"],
+		"founded": 1886,
+		"ground": "Emirates Stadium",
+		"ground_capacity": 60355,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "http://www.arsenal.com",
+				"title": "website"
+			},
+			{
+				"url": "https://twitter.com/Arsenal",
+				"title": "twitter"
+			},
+			{
+				"url": "https://www.facebook.com/Arsenal",
+				"title": "facebook"
+			},
+			{
+				"url": "https://www.instagram.com/arsenal/",
+				"title": "instagram"
+			},
+			{
+				"url": "https://www.youtube.com/user/Arsenal",
+				"title": "youtube"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#EF0107",
+				"title": "home"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "away"
+			},
+			{
+				"hex": "#000000",
+				"title": "third"
+			},
+			{
+				"hex": "#FFCD00",
+				"title": "fourth"
+			},
+			{
+				"hex": "#FFCD00",
+				"title": "fifth"
+			}
+		]
+	},
+	{
+		"id": "3",
+		"title": "Chelsea",
+		"logo": "Chelsea.png",
+		"full_name": "Chelsea Football Club",
+		"nicknames": ["The Blues", "The Pensioners"],
+		"founded": 1905,
+		"ground": "Stamford Bridge",
+		"ground_capacity": 42055,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "http://www.arsenal.com",
+				"title": "website"
+			},
+			{
+				"url": "https://twitter.com/Arsenal",
+				"title": "twitter"
+			},
+			{
+				"url": "https://www.facebook.com/Arsenal",
+				"title": "facebook"
+			},
+			{
+				"url": "https://www.instagram.com/arsenal/",
+				"title": "instagram"
+			},
+			{
+				"url": "https://www.youtube.com/user/Arsenal",
+				"title": "youtube"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#034694",
+				"title": "home"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "away"
+			},
+			{
+				"hex": "#1f1f1f",
+				"title": "third"
+			},
+			{
+				"hex": "#C8102E",
+				"title": "fourth"
+			}
+		]
+	}
+]
