@@ -12,17 +12,14 @@
 	function getTeams(league) {
 		return Info.filter((item) => item.league === league);
 	}
-	// make a function that parses the info json and returns the teams that match the search query by team title or by color title inside team color array
+	// make a function that parses the info json and returns the teams that match the search query by team title or by color title inside team color array and array and by league title
 	function searchTeams(query) {
-		return Info.filter((item) => {
-			if (item.title.toLowerCase().includes(query)) {
-				return true;
-			}
-			if (item.colors.some((color) => color.title.toLowerCase().includes(query))) {
-				return true;
-			}
-			return false;
-		});
+		return Info.filter(
+			(item) =>
+				item.title.toLowerCase().includes(query) ||
+				item.colors.map((color) => color.title.toLowerCase()).includes(query) ||
+				item.league.toLowerCase().includes(query)
+		);
 	}
 
 	let searchQuery = '';
@@ -38,6 +35,9 @@
 				isSearchOpen ? 'rounded-b-none border-b-transparent' : ''
 			}`}
 			for="search"
+			on:mouseleave={() => {
+				isSearchOpen = false;
+			}}
 		>
 			<div
 				class="bg-[#F5F5F5] rounded-full grid place-items-center border-[0.6px] border-neutral-300 w-[40px] aspect-square"
@@ -76,6 +76,7 @@
 					isSearchOpen = true;
 				}}
 				on:input={(e) => {
+					isSearchOpen = true;
 					serachResult = searchTeams(e.target.value.toLowerCase());
 				}}
 			/>
