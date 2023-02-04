@@ -93,7 +93,7 @@
 					<a href={result.id} class="flex flex-row items-center gap-[12px]">
 						<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
 							<img
-								src={`src/lib/logos/${result.logo}`}
+								src={`./logos/${result.logo}`}
 								alt={result.title}
 								class="w-[30px] h-[30px] object-contain"
 							/>
