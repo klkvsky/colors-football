@@ -208,6 +208,5 @@
 			<Card />
 		</ul>
 	</main>
-
 	<Footer />
 </div>
