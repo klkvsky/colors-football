@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import Footer from '$lib/footer.svelte';
 </script>
 
 <svelte:head>
@@ -11,7 +12,10 @@
 	/>
 </svelte:head>
 
-<slot />
+<div class="flex flex-col min-h-[98vh] justify-between">
+	<slot />
+	<Footer />
+</div>
 
 <style lang="postcss">
 	:global(html) {

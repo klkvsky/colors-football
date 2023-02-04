@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Footer from '$lib/footer.svelte';
-
 	function hexToRgbCmyk(hex: string) {
 		let r, g, b;
 		if (hex.length === 7) {
@@ -363,4 +361,4 @@
 	</div>
 </main>
 
-<Footer />
+
