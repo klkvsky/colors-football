@@ -20,9 +20,15 @@
 		let m = 1 - g / 255;
 		let y = 1 - b / 255;
 		let k = Math.min(c, m, y);
-		c = (c - k) / (1 - k);
-		m = (m - k) / (1 - k);
-		y = (y - k) / (1 - k);
+		if (k === 1) {
+			c = 0;
+			m = 0;
+			y = 0;
+		} else {
+			c = (c - k) / (1 - k);
+			m = (m - k) / (1 - k);
+			y = (y - k) / (1 - k);
+		}
 		c = Math.round(c * 100);
 		m = Math.round(m * 100);
 		y = Math.round(y * 100);
@@ -44,12 +50,13 @@
 		</div>
 
 		<div
-			class="bg-white border-[0.6px] border-neutral-300 rounded-[10px] p-[12px] flex flex-col gap-[8px] w-full h-fit lg:max-w-[840px] lg:mx-auto lg:grid lg:grid-cols-2"
+			class="bg-white border-[0.6px] border-neutral-300 rounded-[10px] p-[12px] flex flex-col gap-[8px] w-full h-fit lg:max-w-[840px] lg:mx-auto lg:grid lg:grid-cols-2 relative"
 		>
+			<div class="hidden lg:block absolute w-[.6px] h-[63%] bg-neutral-300 top-0 left-[50%]" />
 			<p class="font-bold text-[16px] text-neutral-600">
 				Full Name: <span class="text-neutral-900"> {item?.full_name} </span>
 			</p>
-			<p class="font-bold text-[16px] text-neutral-600">
+			<p class="font-bold text-[16px] text-neutral-600 lg:pl-[10%]">
 				Nickname(s): <span class="text-neutral-900">
 					{#each item.nicknames as nickname, i}
 						{#if i > 0}, {/if}
@@ -60,7 +67,7 @@
 			<p class="font-bold text-[16px] text-neutral-600">
 				Founded: <span class="text-neutral-900"> {item?.founded} </span>
 			</p>
-			<p class="font-bold text-[16px] text-neutral-600">
+			<p class="font-bold text-[16px] text-neutral-600 lg:pl-[10%]">
 				Ground: <span class="text-neutral-900"> {item?.ground} </span>
 			</p>
 			<p class="font-bold text-[16px] text-neutral-600">
@@ -69,14 +76,14 @@
 
 			{#if item.links}
 				<div
-					class="flex flex-row items-center gap-[12px] border-t-[0.6px] border-neutral-300 pt-[12px] lg:col-span-2"
+					class="flex flex-row items-center gap-[12px] border-t-[0.6px] border-neutral-300 pt-[12px] lg:col-span-2 w-full overflow-scroll no-scrollbar"
 				>
 					{#each item.links as link}
 						<a
 							href={link.url}
 							target="_blank"
 							rel="noreferrer"
-							class="text-neutral-900 text-[14px] font-black px-[12px] py-[8px] rounded-full border-[0.6px] border-neutral-300 capitalize"
+							class="text-neutral-900 text-[14px] font-black px-[12px] py-[8px] rounded-full border-[0.6px] border-neutral-300 capitalize hover:bg-neutral-100 transition-all duration-300 ease-in-out"
 						>
 							{link.title}</a
 						>
