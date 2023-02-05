@@ -128,7 +128,9 @@
 										<span class="text-[#360D3A] capitalize">
 											<!-- return title of colour inside team colour array that is equal to searchquery -->
 											{result.colors.find((color) => color.title.includes(searchQuery)) &&
-												result.colors.find((color) => color.title.includes(searchQuery)).title}
+												result.colors.find((color) => color.title.includes(searchQuery)).title} <span class="hidden">
+													yo
+												</span>
 										</span>
 										<span class="text-[#360D3A29]">{result.title}</span>
 									{:else}
