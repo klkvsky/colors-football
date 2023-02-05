@@ -145,7 +145,7 @@
 		</label>
 
 		<div
-			class={`bg-white p-[8px] rounded-[10px] flex flex-row items-center gap-[12px] relative border-[0.6px] border-neutral-300 w-full sm:max-w-[320px] sm:min-w-[220px] cursor-pointer ${
+			class={`bg-white p-[8px] rounded-[10px] flex flex-row items-center gap-[12px] relative border-[0.6px] border-neutral-300 w-full sm:max-w-[220px] sm:min-w-[320px] cursor-pointer ${
 				isLeaguePickerOpen ? 'rounded-b-none' : ''
 			}`}
 			on:click={() => {
