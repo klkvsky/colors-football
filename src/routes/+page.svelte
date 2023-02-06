@@ -7,15 +7,15 @@
 	let isLeaguePickerOpen = false;
 	let isSearchOpen = false;
 	let serachResult = [];
-	// parse info json to find all leagues and make them unique and assign them to a variable
+
 	const leagues = [...new Set(Info.map((item) => item.league))];
-	// make a function that parses the info json and returns the teams that match the league
+
 	function getTeams(league) {
 		return Info.filter((item) => item.league === league);
 	}
 
 	let isColorSpeicif = false;
-	// make a function that parses the info json and returns the teams that match the search query by team title or by color title inside team color array and array and by league title and if search query is color specific it will return color name in search query
+
 	function searchTeams(query) {
 		return Info.filter((item) => {
 			if (item.title.toLowerCase().includes(query)) {
@@ -151,7 +151,9 @@
 			on:click={() => {
 				isLeaguePickerOpen = !isLeaguePickerOpen;
 			}}
-			on:keydown={() => {}}
+			on:keydown={() => {
+				console.log('hello');
+			}}
 			use:clickOutside
 			on:click_outside={() => {
 				isLeaguePickerOpen = false;
