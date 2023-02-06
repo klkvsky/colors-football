@@ -96,10 +96,10 @@
 		>
 			{#each item.colors as color}
 				<div
-					class="bg-white p-[12px] rounded-[10px] flex flex-col gap-[8px] border-[0.6px] border-neutral-300 w-full h-fit"
+					class="bg-white p-[8px] rounded-[10px] flex flex-col gap-[8px] border-[0.6px] border-neutral-300 w-full h-fit"
 				>
 					<div
-						class="w-full h-[64px] rounded-[4px] -mt-[4px] border-[0.6px] border-neutral-300"
+						class="w-full h-[64px] rounded-[4px] border-[0.6px] border-neutral-300"
 						style={`background-color: ${color.hex}`}
 					/>
 					<h2 class="font-black capitalize text-[16px] text-neutral-900 mt-[4px]">{color.title}</h2>

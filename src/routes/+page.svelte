@@ -104,7 +104,7 @@
 				}}
 			/>
 
-			{#if serachResult.length > 0 && searchQuery.length > 0}
+			{#if serachResult.length > 0 && searchQuery.length > 2}
 				<div
 					class={`absolute top-[85%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top px-[8px] flex flex-col text-left overflow-hidden text-[14px] font-black z-[100] shadow-md  ${
 						isSearchOpen
@@ -113,8 +113,8 @@
 					}`}
 				>
 					<div class="w-full h-[0.6px] bg-neutral-300 mt-[8px] opacity-0" />
-					{#each serachResult as result, index}
-						<div class="ml-[50px] w-[calc(100%-100px)] h-[0.6px] bg-neutral-300" />
+					{#each serachResult as result}
+						<div class="ml-[50px] w-[calc(100%-58px)] h-[0.6px] bg-neutral-300" />
 						<a href={result.id} class="flex flex-row items-center gap-[12px] py-[6px]">
 							<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
 								<img
@@ -200,7 +200,7 @@
 			</svg>
 
 			<div
-				class={`absolute top-[103%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] -translate-y-[2px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top transition-all duration-300 ease-in-out px-[8px] flex flex-col gap-[12px] pb-[8px] text-left overflow-clip text-[14px] font-black shadow-md rounded-t-none ${
+				class={`absolute top-[103%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] -translate-y-[2px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top transition-all duration-300 ease-in-out px-[8px] flex flex-col gap-[12px] pb-[8px] text-left overflow-clip text-[14px] font-black shadow-md rounded-t-none z-[50] ${
 					isLeaguePickerOpen ? 'opacity-100' : 'hidden pointer-events-none opacity-0'
 				}`}
 			>
