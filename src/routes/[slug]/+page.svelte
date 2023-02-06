@@ -99,19 +99,27 @@
 					class="bg-white p-[8px] rounded-[10px] flex flex-col gap-[8px] border-[0.6px] border-neutral-300 w-full h-fit"
 				>
 					<div
-						class="w-full h-[64px] rounded-[4px] border-[0.6px] border-neutral-300"
+						class="w-full h-[64px] rounded-[4px] border-[0.6px] border-neutral-300/0 relative"
 						style={`background-color: ${color.hex}`}
-					/>
-					<h2 class="font-black capitalize text-[16px] text-neutral-900 mt-[4px]">{color.title}</h2>
-					<p class="text-neutral-600 text-[16px] font-bold uppercase">
-						Hex: <span class="text-neutral-900"> {color.hex.slice(1)} </span>
-					</p>
-					<p class="text-neutral-600 text-[16px] font-bold">
-						RGB: <span class="text-neutral-900"> {hexToRgbCmyk(color.hex.slice(1)).rgb} </span>
-					</p>
-					<p class="text-neutral-600 text-[16px] font-bold">
-						CMYK: <span class="text-neutral-900"> {hexToRgbCmyk(color.hex.slice(1)).cmyk} </span>
-					</p>
+					>
+						<div
+							class="absolute top-[0.05px] left-[0.05px] rounded-[4px] border-[0.6px] border-[#00000012] w-[calc(100%-0.1px)] h-[calc(100%-0.1px)]"
+						/>
+					</div>
+					<div class="flex flex-col gap-[8px] w-full h-full p-[4px]">
+						<h2 class="font-black capitalize text-[16px] text-neutral-900">
+							{color.title}
+						</h2>
+						<p class="text-neutral-600 text-[16px] font-bold uppercase">
+							Hex: <span class="text-neutral-900"> {color.hex.slice(1)} </span>
+						</p>
+						<p class="text-neutral-600 text-[16px] font-bold">
+							RGB: <span class="text-neutral-900"> {hexToRgbCmyk(color.hex.slice(1)).rgb} </span>
+						</p>
+						<p class="text-neutral-600 text-[16px] font-bold">
+							CMYK: <span class="text-neutral-900"> {hexToRgbCmyk(color.hex.slice(1)).cmyk} </span>
+						</p>
+					</div>
 				</div>
 			{/each}
 		</div>

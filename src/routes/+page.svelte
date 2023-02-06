@@ -113,9 +113,9 @@
 							: 'max-h-[0px]  pointer-events-none opacity-0'
 					}`}
 				>
-					<div class="w-full h-[0.6px] bg-neutral-300 mt-[8px] opacity-0" />
-					{#each serachResult as result}
-						<div class="ml-[50px] w-[calc(100%-58px)] h-[0.6px] bg-neutral-300" />
+					<!-- <div class="w-full h-[0.6px] bg-neutral-300 mt-[8px] opacity-0" /> -->
+					{#each serachResult as result, index}
+						<div class={`ml-[50px] w-[calc(100%-58px)] h-[0.6px] bg-neutral-300`} />
 						<a href={result.id} class="flex flex-row items-center gap-[12px] py-[6px]">
 							<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
 								<img
@@ -146,15 +146,9 @@
 		</label>
 
 		<div
-			class={`bg-white p-[8px] rounded-[10px] flex flex-row items-center gap-[12px] relative border-[0.6px] border-neutral-300 w-full sm:max-w-[220px] sm:min-w-[320px] cursor-pointer ${
+			class={`bg-white p-[8px] rounded-[10px] flex flex-row items-center gap-[12px] relative border-[0.6px] border-neutral-300 w-full sm:max-w-[220px] sm:min-w-[220px] cursor-pointer ${
 				isLeaguePickerOpen ? 'rounded-b-none' : ''
 			}`}
-			on:click={() => {
-				isLeaguePickerOpen = !isLeaguePickerOpen;
-			}}
-			on:keydown={() => {
-				console.log('hello');
-			}}
 			use:clickOutside
 			on:click_outside={() => {
 				isLeaguePickerOpen = false;
@@ -162,48 +156,60 @@
 		>
 			{#if leaguesColors}
 				<div
-					class="rounded-full grid place-items-center border-[0.6px] w-[40px] aspect-square"
-					style={`background-color: ${
-						selectedLeague != 'All'
-							? `${
-									leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0])
-										.color
-							  }14`
-							: '#F5F5F5'
-					}; border-color: ${
-						selectedLeague != 'All'
-							? `${
-									leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0])
-										.color
-							  }29`
-							: '#360D3A29'
-					} `}
+					class="flex flex-row items-center gap-[12px]"
+					on:click={() => {
+						isLeaguePickerOpen = !isLeaguePickerOpen;
+					}}
+					on:keydown={() => {
+						console.log('hello');
+					}}
 				>
-					<!-- All images are without work League in names -->
-					<img
-						src={`./leagues/${selectedLeague != 'All' ? selectedLeague.split(' ')[0] : 'All'}.svg`}
-						alt={selectedLeague}
-						class="w-[25px] h-[25px] object-contain"
-					/>
-				</div>
+					<div
+						class="rounded-full grid place-items-center border-[0.6px] w-[40px] aspect-square"
+						style={`background-color: ${
+							selectedLeague != 'All'
+								? `${
+										leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0])
+											.color
+								  }14`
+								: '#F5F5F5'
+						}; border-color: ${
+							selectedLeague != 'All'
+								? `${
+										leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0])
+											.color
+								  }29`
+								: '#360D3A29'
+						} `}
+					>
+						<!-- All images are without work League in names -->
+						<img
+							src={`./leagues/${
+								selectedLeague != 'All' ? selectedLeague.split(' ')[0] : 'All'
+							}.svg`}
+							alt={selectedLeague}
+							class="w-[25px] h-[25px] object-contain"
+						/>
+					</div>
 
-				<p class="text-neutral-600 font-black text-[16px]">
-					{selectedLeague != 'All' ? selectedLeague : 'All Leagues'}
-				</p>
-				<svg
-					width="12"
-					height="12"
-					viewBox="0 0 12 12"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					class="-ml-[8px]"
-				>
-					<rect width="12" height="12" fill="white" />
-					<path
-						d="M9.58579 4H2.41421C1.52331 4 1.07714 5.07714 1.70711 5.70711L5.29289 9.29289C5.68342 9.68342 6.31658 9.68342 6.70711 9.29289L10.2929 5.70711C10.9229 5.07714 10.4767 4 9.58579 4Z"
-						fill="#525252"
-					/>
-				</svg>
+					<p class="text-neutral-600 font-black text-[16px]">
+						{selectedLeague != 'All' ? selectedLeague : 'All Leagues'}
+					</p>
+					<svg
+						width="12"
+						height="12"
+						viewBox="0 0 12 12"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						class="-ml-[8px]"
+					>
+						<rect width="12" height="12" fill="white" />
+						<path
+							d="M9.58579 4H2.41421C1.52331 4 1.07714 5.07714 1.70711 5.70711L5.29289 9.29289C5.68342 9.68342 6.31658 9.68342 6.70711 9.29289L10.2929 5.70711C10.9229 5.07714 10.4767 4 9.58579 4Z"
+							fill="#525252"
+						/>
+					</svg>
+				</div>
 
 				<div
 					class={`absolute top-[103%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] -translate-y-[2px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top transition-all duration-300 ease-in-out px-[8px] flex flex-col gap-[12px] pb-[8px] text-left overflow-clip text-[14px] font-black shadow-md rounded-t-none z-[50] ${
