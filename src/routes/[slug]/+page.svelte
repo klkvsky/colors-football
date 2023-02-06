@@ -42,7 +42,7 @@
 </script>
 
 {#if item}
-	<main class="pt-[32px] flex flex-col gap-[32px]">
+	<main class="pt-[32px] flex flex-col gap-[16px]">
 		<div
 			class="bg-neutral-100 w-full aspect-video border-[.6px] border-neutral-300 rounded-[10px] grid place-items-center lg:max-w-[840px] lg:mx-auto"
 		>
@@ -53,10 +53,10 @@
 			class="bg-white border-[0.6px] border-neutral-300 rounded-[10px] p-[12px] flex flex-col gap-[8px] w-full h-fit lg:max-w-[840px] lg:mx-auto lg:grid lg:grid-cols-2 relative"
 		>
 			<div class="hidden lg:block absolute w-[.6px] h-[63%] bg-neutral-300 top-0 left-[50%]" />
-			<p class="font-bold text-[16px] text-neutral-600">
+			<p class="font-bold text-[16px] text-neutral-600 lg:pr-[24px]">
 				Full Name: <span class="text-neutral-900"> {item?.full_name} </span>
 			</p>
-			<p class="font-bold text-[16px] text-neutral-600 lg:pl-[10%]">
+			<p class="font-bold text-[16px] text-neutral-600 lg:pl-[24px]">
 				Nickname(s): <span class="text-neutral-900">
 					{#each item.nicknames as nickname, i}
 						{#if i > 0}, {/if}
@@ -64,13 +64,13 @@
 					{/each}
 				</span>
 			</p>
-			<p class="font-bold text-[16px] text-neutral-600">
+			<p class="font-bold text-[16px] text-neutral-600 lg:pr-[24px]">
 				Founded: <span class="text-neutral-900"> {item?.founded} </span>
 			</p>
-			<p class="font-bold text-[16px] text-neutral-600 lg:pl-[10%]">
+			<p class="font-bold text-[16px] text-neutral-600 lg:pl-[24px]">
 				Ground: <span class="text-neutral-900"> {item?.ground} </span>
 			</p>
-			<p class="font-bold text-[16px] text-neutral-600">
+			<p class="font-bold text-[16px] text-neutral-600 lg:pr-[24px]">
 				Capacity: <span class="text-neutral-900"> {item?.ground_capacity.toLocaleString()} </span>
 			</p>
 

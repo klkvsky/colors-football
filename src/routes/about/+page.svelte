@@ -11,8 +11,10 @@
 			class="flex flex-row items-center justify-around p-[12px] border-t-[0.6px] border-t-neutral-300 gap-[12px]"
 		>
 			<a
-				href="/"
-				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px]"
+				href="https://bento.me/predrag"
+				target="_blank"
+				rel="noreferrer"
+				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px] hover:bg-neutral-100 transition-all duration-300 ease-in-out"
 			>
 				<svg
 					width="25"
@@ -45,8 +47,10 @@
 				</svg>
 			</a>
 			<a
-				href="/"
-				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px]"
+				href="https://twitter.com/predragus"
+				target="_blank"
+				rel="noreferrer"
+				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px] hover:bg-neutral-100 transition-all duration-300 ease-in-out"
 			>
 				<svg
 					width="25"
@@ -72,8 +76,10 @@
 				</svg>
 			</a>
 			<a
-				href="/"
-				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px]"
+				href="https://tally.so/r/wbZp7g"
+				target="_blank"
+				rel="noreferrer"
+				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px] hover:bg-neutral-100 transition-all duration-300 ease-in-out"
 			>
 				<svg
 					width="25"
@@ -110,8 +116,10 @@
 			class="flex flex-row items-center justify-around p-[12px] border-t-[0.6px] border-t-neutral-300 gap-[12px]"
 		>
 			<a
-				href="/"
-				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px]"
+				href="https://bento.me/klkvsky"
+				target="_blank"
+				rel="noreferrer"
+				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px] hover:bg-neutral-100 transition-all duration-300 ease-in-out"
 			>
 				<svg
 					width="25"
@@ -144,8 +152,10 @@
 				</svg>
 			</a>
 			<a
-				href="/"
-				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px]"
+				href="https://twitter.com/klkvsky"
+				target="_blank"
+				rel="noreferrer"
+				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px] hover:bg-neutral-100 transition-all duration-300 ease-in-out"
 			>
 				<svg
 					width="25"
@@ -171,8 +181,8 @@
 				</svg>
 			</a>
 			<a
-				href="/"
-				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px]"
+				href="mailto:klvsky@gmail.com"
+				class="rounded-[6px] border-[.6px] border-neutral-300 grid place-items-center w-full h-[40px] hover:bg-neutral-100 transition-all duration-300 ease-in-out"
 			>
 				<svg
 					width="25"
@@ -203,7 +213,22 @@
 	<div
 		class="flex-1 w-full min-w-full rounded-[10px] p-[12px] h-[46px] border-[0.6px] border-neutral-300 text-[16px] font-bold text-neutral-600"
 	>
-		Inspired by <span class="text-neutral-900 font-black"> NBAColors </span>
-		from <span class="text-neutral-900 font-black"> Toni Gemayel </span>.
+		Inspired by <a
+			href="https://nbacolors.com/"
+			target="_blank"
+			rel="noreferrer"
+			class="text-neutral-900 font-black"
+		>
+			NBAColors
+		</a>
+		from
+		<a
+			href="https://tonigemayel.com/"
+			target="_blank"
+			rel="noreferrer"
+			class="text-neutral-900 font-black"
+		>
+			Toni Gemayel
+		</a>
 	</div>
 </div>

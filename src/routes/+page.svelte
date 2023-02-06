@@ -93,6 +93,7 @@
 				placeholder="Try Red"
 				id="search"
 				class="font-black placeholder:text-neutral-600 text-[16px] outline-none"
+				autocomplete="off"
 				bind:value={searchQuery}
 				on:focus={() => {
 					isSearchOpen = true;
@@ -105,14 +106,15 @@
 
 			{#if serachResult.length > 0 && searchQuery.length > 0}
 				<div
-					class={`absolute top-[85%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top px-[8px] flex flex-col text-left overflow-hidden text-[14px] font-black z-[100] shadow-md divide-y-[0.6px] divide-neutral-300 ${
+					class={`absolute top-[85%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top px-[8px] flex flex-col text-left overflow-hidden text-[14px] font-black z-[100] shadow-md  ${
 						isSearchOpen
 							? 'max-h-[calc(2ch+24px+8)] delay-200 opacity-100'
 							: 'max-h-[0px]  pointer-events-none opacity-0'
 					}`}
 				>
 					<div class="w-full h-[0.6px] bg-neutral-300 mt-[8px] opacity-0" />
-					{#each serachResult as result}
+					{#each serachResult as result, index}
+						<div class="ml-[50px] w-[calc(100%-100px)] h-[0.6px] bg-neutral-300" />
 						<a href={result.id} class="flex flex-row items-center gap-[12px] py-[6px]">
 							<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
 								<img
@@ -125,14 +127,12 @@
 							<p class="font-black placeholder:text-neutral-600 text-[16px] outline-none">
 								{#key isColorSpeicif}
 									{#if isColorSpeicif && searchQuery.length > 2}
+										<span class="text-[#360D3A]">{result.title}</span>
 										<span class="text-[#360D3A] capitalize">
-											<!-- return title of colour inside team colour array that is equal to searchquery -->
 											{result.colors.find((color) => color.title.includes(searchQuery)) &&
-												result.colors.find((color) => color.title.includes(searchQuery)).title} <span class="hidden">
-													yo
-												</span>
+												result.colors.find((color) => color.title.includes(searchQuery)).title}
+											<span class="hidden"> yo </span>
 										</span>
-										<span class="text-[#360D3A29]">{result.title}</span>
 									{:else}
 										{result.title}
 									{/if}
@@ -212,7 +212,9 @@
 						isLeaguePickerOpen = false;
 						selectedLeague = 'All';
 					}}
-					class="text-neutral-900 text-left">All Leagues</button
+					class={`text-neutral-900 text-left ${
+						selectedLeague == 'All' ? 'text-neutral-900' : 'text-neutral-600'
+					}`}>All Leagues</button
 				>
 				{#each leagues as league}
 					<button
@@ -221,7 +223,9 @@
 							selectedLeague = league;
 							isLeaguePickerOpen = false;
 						}}
-						class="text-neutral-900 relative z-50 text-left">{league}</button
+						class={`relative z-50 text-left ${
+							selectedLeague == league ? 'text-neutral-900' : 'text-neutral-600'
+						}`}>{league}</button
 					>
 				{/each}
 			</div>
