@@ -1,4 +1,5 @@
 <script>
+	// @ts-nocheck
 	import Card from '../lib/card.svelte';
 	import Info from '../lib/Info.json';
 	import { clickOutside } from '../lib/clickOutside.js';
@@ -159,78 +160,82 @@
 				isLeaguePickerOpen = false;
 			}}
 		>
-			<div
-				class="rounded-full grid place-items-center border-[0.6px] w-[40px] aspect-square"
-				style={`background-color: ${
-					selectedLeague != 'All'
-						? `${
-								leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0]).color
-						  }14`
-						: '#F5F5F5'
-				}; border-color: ${
-					selectedLeague != 'All'
-						? `${
-								leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0]).color
-						  }29`
-						: '#360D3A29'
-				} `}
-			>
-				<!-- All images are without work League in names -->
-				<img
-					src={`./leagues/${selectedLeague != 'All' ? selectedLeague.split(' ')[0] : 'All'}.svg`}
-					alt={selectedLeague}
-					class="w-[25px] h-[25px] object-contain"
-				/>
-			</div>
-
-			<p class="text-neutral-600 font-black text-[16px]">
-				{selectedLeague != 'All' ? selectedLeague : 'All Leagues'}
-			</p>
-			<svg
-				width="12"
-				height="12"
-				viewBox="0 0 12 12"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-				class="-ml-[8px]"
-			>
-				<rect width="12" height="12" fill="white" />
-				<path
-					d="M9.58579 4H2.41421C1.52331 4 1.07714 5.07714 1.70711 5.70711L5.29289 9.29289C5.68342 9.68342 6.31658 9.68342 6.70711 9.29289L10.2929 5.70711C10.9229 5.07714 10.4767 4 9.58579 4Z"
-					fill="#525252"
-				/>
-			</svg>
-
-			<div
-				class={`absolute top-[103%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] -translate-y-[2px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top transition-all duration-300 ease-in-out px-[8px] flex flex-col gap-[12px] pb-[8px] text-left overflow-clip text-[14px] font-black shadow-md rounded-t-none z-[50] ${
-					isLeaguePickerOpen ? 'opacity-100' : 'hidden pointer-events-none opacity-0'
-				}`}
-			>
-				<div class="w-full h-[.6px] bg-neutral-300" />
-
-				<button
-					on:click={() => {
-						newInfo = Info;
-						isLeaguePickerOpen = false;
-						selectedLeague = 'All';
-					}}
-					class={`text-neutral-900 text-left ${
-						selectedLeague == 'All' ? 'text-neutral-900' : 'text-neutral-600'
-					}`}>All Leagues</button
+			{#if leaguesColors}
+				<div
+					class="rounded-full grid place-items-center border-[0.6px] w-[40px] aspect-square"
+					style={`background-color: ${
+						selectedLeague != 'All'
+							? `${
+									leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0])
+										.color
+							  }14`
+							: '#F5F5F5'
+					}; border-color: ${
+						selectedLeague != 'All'
+							? `${
+									leaguesColors.find((league) => league.league == selectedLeague.split(' ')[0])
+										.color
+							  }29`
+							: '#360D3A29'
+					} `}
 				>
-				{#each leagues as league}
+					<!-- All images are without work League in names -->
+					<img
+						src={`./leagues/${selectedLeague != 'All' ? selectedLeague.split(' ')[0] : 'All'}.svg`}
+						alt={selectedLeague}
+						class="w-[25px] h-[25px] object-contain"
+					/>
+				</div>
+
+				<p class="text-neutral-600 font-black text-[16px]">
+					{selectedLeague != 'All' ? selectedLeague : 'All Leagues'}
+				</p>
+				<svg
+					width="12"
+					height="12"
+					viewBox="0 0 12 12"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="-ml-[8px]"
+				>
+					<rect width="12" height="12" fill="white" />
+					<path
+						d="M9.58579 4H2.41421C1.52331 4 1.07714 5.07714 1.70711 5.70711L5.29289 9.29289C5.68342 9.68342 6.31658 9.68342 6.70711 9.29289L10.2929 5.70711C10.9229 5.07714 10.4767 4 9.58579 4Z"
+						fill="#525252"
+					/>
+				</svg>
+
+				<div
+					class={`absolute top-[103%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] -translate-y-[2px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top transition-all duration-300 ease-in-out px-[8px] flex flex-col gap-[12px] pb-[8px] text-left overflow-clip text-[14px] font-black shadow-md rounded-t-none z-[50] ${
+						isLeaguePickerOpen ? 'opacity-100' : 'hidden pointer-events-none opacity-0'
+					}`}
+				>
+					<div class="w-full h-[.6px] bg-neutral-300" />
+
 					<button
 						on:click={() => {
-							newInfo = getTeams(league);
-							selectedLeague = league;
+							newInfo = Info;
 							isLeaguePickerOpen = false;
+							selectedLeague = 'All';
 						}}
-						class={`relative z-50 text-left ${
-							selectedLeague == league ? 'text-neutral-900' : 'text-neutral-600'
-						}`}>{league}</button
+						class={`text-neutral-900 text-left ${
+							selectedLeague == 'All' ? 'text-neutral-900' : 'text-neutral-600'
+						}`}>All Leagues</button
 					>
-				{/each}
-			</div>
+					{#each leagues as league}
+						<button
+							on:click={() => {
+								newInfo = getTeams(league);
+								selectedLeague = league;
+								isLeaguePickerOpen = false;
+							}}
+							class={`relative z-50 text-left ${
+								selectedLeague == league ? 'text-neutral-900' : 'text-neutral-600'
+							}`}>{league}</button
+						>
+					{/each}
+				</div>
+			{/if}
 		</div>
 	</nav>
 	<main class="flex flex-col mt-[16px] lg:mt-[32px] lg:max-w-[840px] lg:mx-auto">
