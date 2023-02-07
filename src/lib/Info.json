@@ -1,150 +1,693 @@
 [
 	{
-		"id": "1",
-		"title": "West Ham",
-		"logo": "West_Ham.webp",
-		"full_name": "West Ham United Football Club",
-		"nicknames": ["The Hammers", "The Irons", "The Academy"],
-		"founded": 1895,
-		"ground": "Boleyn Ground",
-		"ground_capacity": 35000,
+		"id": "arsenal",
+		"title": "Arsenal",
+		"logo": "arsenal.svg",
+		"full_name": "Arsenal Football Club",
+		"nicknames": ["The Gunners"],
+		"founded": 1886,
+		"ground": "Emirates Stadium",
+		"ground_capacity": 60704,
 		"league": "Premier League",
 		"links": [
 			{
 				"url": "http://www.arsenal.com",
-				"title": "website"
+				"title": "Website"
 			},
 			{
-				"url": "https://twitter.com/Arsenal",
-				"title": "twitter"
-			},
-			{
-				"url": "https://www.facebook.com/Arsenal",
-				"title": "facebook"
-			},
-			{
-				"url": "https://www.instagram.com/arsenal/",
-				"title": "instagram"
-			},
-			{
-				"url": "https://www.youtube.com/user/Arsenal",
-				"title": "youtube"
+				"url": "https://en.wikipedia.org/wiki/Arsenal_F.C.",
+				"title": "Wikipedia"
 			}
 		],
 		"colors": [
 			{
-				"hex": "#7A263A",
-				"title": "home"
+				"hex": "#E20613",
+				"title": "Red"
+			},
+			{
+				"hex": "#A1853E",
+				"title": "Gold"
+			},
+			{
+				"hex": "#003671",
+				"title": "Blue"
 			},
 			{
 				"hex": "#FFFFFF",
-				"title": "away"
+				"title": "White"
 			}
 		]
 	},
 	{
-		"id": "2",
-		"title": "Arsenal",
-		"logo": "Arsenal.png",
-		"full_name": "Arsenal Football Club",
-		"nicknames": ["The Gunners", "The Gunners"],
-		"founded": 1886,
-		"ground": "Emirates Stadium",
-		"ground_capacity": 60355,
+		"id": "aston-villa",
+		"title": "Aston Villa",
+		"logo": "aston-villa.svg",
+		"full_name": "Aston Villa Football Club",
+		"nicknames": ["The Villans", "The Lions"],
+		"founded": 1874,
+		"ground": "Villa Park",
+		"ground_capacity": 42749,
 		"league": "Premier League",
 		"links": [
 			{
-				"url": "http://www.arsenal.com",
-				"title": "website"
+				"url": "https://www.avfc.co.uk/",
+				"title": "Website"
 			},
 			{
-				"url": "https://twitter.com/Arsenal",
-				"title": "twitter"
-			},
-			{
-				"url": "https://www.facebook.com/Arsenal",
-				"title": "facebook"
-			},
-			{
-				"url": "https://www.instagram.com/arsenal/",
-				"title": "instagram"
-			},
-			{
-				"url": "https://www.youtube.com/user/Arsenal",
-				"title": "youtube"
+				"url": "https://en.wikipedia.org/wiki/Aston_Villa_F.C.",
+				"title": "Wikipedia"
 			}
 		],
 		"colors": [
 			{
-				"hex": "#EF0107",
-				"title": "home"
+				"hex": "#94BEE5",
+				"title": "Blue"
+			},
+			{
+				"hex": "#FFE600",
+				"title": "Yellow"
+			},
+			{
+				"hex": "#660033",
+				"title": "Maroon"
+			}
+		]
+	},
+	{
+		"id": "bournemouth",
+		"title": "Bournemouth",
+		"logo": "bournemouth.svg",
+		"full_name": "Athletic Football Club Bournemouth",
+		"nicknames": ["The Cherries", "Boscombe"],
+		"founded": 1899,
+		"ground": "Dean Court",
+		"ground_capacity": 11364,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.afcb.co.uk/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/AFC_Bournemouth",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#D50811",
+				"title": "Red"
+			},
+			{
+				"hex": "#1D1D1B",
+				"title": "Black"
 			},
 			{
 				"hex": "#FFFFFF",
-				"title": "away"
+				"title": "White"
+			},
+			{
+				"hex": "#B4A06F",
+				"title": "Gold"
+			}
+		]
+	},
+	{
+		"id": "brentford",
+		"title": "Brentford",
+		"logo": "brentford.svg",
+		"full_name": "Brentford Football Club",
+		"nicknames": ["The Bees"],
+		"founded": 1889,
+		"ground": "Gtech Community Stadium",
+		"ground_capacity": 17250,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.brentfordfc.com/en",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Brentford_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#D20000",
+				"title": "Red"
+			},
+			{
+				"hex": "#0F0F0F",
+				"title": "Black"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			},
+			{
+				"hex": "#FFB400",
+				"title": "Orange"
+			}
+		]
+	},
+	{
+		"id": "brighton-hove-albion",
+		"title": "Brighton & Hove Albion",
+		"logo": "brighton-hove-albion.svg",
+		"full_name": "Brighton & Hove Albion Football Club",
+		"nicknames": ["The Seagulls", "Albion"],
+		"founded": 1901,
+		"ground": "Falmer Stadium",
+		"ground_capacity": 31800,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.brightonandhovealbion.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Brighton_%26_Hove_Albion_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#0054A6",
+				"title": "Blue"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			}
+		]
+	},
+	{
+		"id": "chelsea",
+		"title": "Chelsea",
+		"logo": "chelsea.svg",
+		"full_name": "Chelsea Football Club",
+		"nicknames": ["The Blues"],
+		"founded": 1905,
+		"ground": "Stamford Bridge",
+		"ground_capacity": 40341,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.chelseafc.com/en",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Chelsea_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#153D8A",
+				"title": "Blue"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			},
+			{
+				"hex": "#E30613",
+				"title": "Red"
+			},
+			{
+				"hex": "#DEA600",
+				"title": "Orange"
+			}
+		]
+	},
+	{
+		"id": "crystal-palace",
+		"title": "Crystal Palace",
+		"logo": "crystal-palace.svg",
+		"full_name": "Crystal Palace Football Club",
+		"nicknames": ["The Eagles", "The Glaziers"],
+		"founded": 1905,
+		"ground": "Selhurst Park",
+		"ground_capacity": 25486,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.cpfc.co.uk/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Crystal_Palace_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#022169",
+				"title": "Blue"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			},
+			{
+				"hex": "#AC162C",
+				"title": "Red"
+			}
+		]
+	},
+	{
+		"id": "everton",
+		"title": "Everton",
+		"logo": "everton.svg",
+		"full_name": "Everton Football Club",
+		"nicknames": ["The Blues", "The Toffees", "The People's Club", "The School of Science"],
+		"founded": 1878,
+		"ground": "Goodison Park",
+		"ground_capacity": 39572,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.evertonfc.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Everton_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#014593",
+				"title": "Blue"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			}
+		]
+	},
+	{
+		"id": "fulham",
+		"title": "Fulham",
+		"logo": "fulham.svg",
+		"full_name": "Fulham Football Club",
+		"nicknames": ["The Cottagers"],
+		"founded": 1879,
+		"ground": "Craven Cottage",
+		"ground_capacity": 25700,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.fulhamfc.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Fulham_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			},
+			{
+				"hex": "#0D0802",
+				"title": "Black"
+			},
+			{
+				"hex": "#E5231B",
+				"title": "Red"
+			}
+		]
+	},
+	{
+		"id": "leeds-united",
+		"title": "Leeds United",
+		"logo": "leeds-united.svg",
+		"full_name": "Leeds United Football Club",
+		"nicknames": ["The Whites", "The Peacocks"],
+		"founded": 1919,
+		"ground": "Elland Road",
+		"ground_capacity": 37792,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.leedsunited.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Leeds_United_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#FDDF12",
+				"title": "Yellow"
+			},
+			{
+				"hex": "#1A5DAD",
+				"title": "Blue"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			}
+		]
+	},
+	{
+		"id": "leicester-city",
+		"title": "Leicester City",
+		"logo": "leicester-city.svg",
+		"full_name": "Leicester City Football Club",
+		"nicknames": ["The Foxes"],
+		"founded": 1884,
+		"ground": "King Power Stadium",
+		"ground_capacity": 32261,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.lcfc.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Leicester_City_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			},
+			{
+				"hex": "#003090",
+				"title": "Blue"
+			},
+			{
+				"hex": "#F7A800",
+				"title": "Orange"
+			}
+		]
+	},
+	{
+		"id": "liverpool",
+		"title": "Liverpool",
+		"logo": "liverpool.svg",
+		"full_name": "Liverpool Football Club",
+		"nicknames": ["The Reds"],
+		"founded": 1892,
+		"ground": "Anfield",
+		"ground_capacity": 53394,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.liverpoolfc.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Liverpool_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#D20B12",
+				"title": "Red"
+			},
+			{
+				"hex": "#019982",
+				"title": "Green"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			}
+		]
+	},
+	{
+		"id": "manchester-city",
+		"title": "Manchester City",
+		"logo": "manchester-city.svg",
+		"full_name": "Manchester City Football Club",
+		"nicknames": ["The Citizens", "The Sky Blues"],
+		"founded": 1880,
+		"ground": "City of Manchester Stadium",
+		"ground_capacity": 53400,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.mancity.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Manchester_City_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#7AB2E1",
+				"title": "Blue"
+			},
+			{
+				"hex": "#FDCA50",
+				"title": "Gold"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			}
+		]
+	},
+	{
+		"id": "manchester-united",
+		"title": "Manchester United",
+		"logo": "manchester-united.svg",
+		"full_name": "Manchester United Football Club",
+		"nicknames": ["The Red Devils", "United"],
+		"founded": 1878,
+		"ground": "Old Trafford",
+		"ground_capacity": 74310,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.manutd.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Manchester_United_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#DA020E",
+				"title": "Red"
+			},
+			{
+				"hex": "#FFE500",
+				"title": "Yellow"
+			}
+		]
+	},
+	{
+		"id": "newcastle-united",
+		"title": "Newcastle United",
+		"logo": "newcastle-united.svg",
+		"full_name": "Newcastle United Football Club",
+		"nicknames": ["The Magpies"],
+		"founded": 1892,
+		"ground": "St James' Park",
+		"ground_capacity": 52305,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.nufc.co.uk/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Newcastle_United_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#000000",
+				"title": "Black"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
+			},
+			{
+				"hex": "#F0B83D",
+				"title": "Gold"
+			},
+			{
+				"hex": "#00B6F1",
+				"title": "Blue"
+			}
+		]
+	},
+	{
+		"id": "nottingam-forest",
+		"title": "Nottingam Forest",
+		"logo": "nottingam-forest.svg",
+		"full_name": "Nottingham Forest Football Club",
+		"nicknames": ["The Reds", "The Tricky Trees", "The Garibaldi"],
+		"founded": 1865,
+		"ground": "City Ground",
+		"ground_capacity": 30445,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.nottinghamforest.co.uk/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Nottingham_Forest_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#DC0D15",
+				"title": "Red"
+			}
+		]
+	},
+	{
+		"id": "southampton",
+		"title": "Southampton",
+		"logo": "southampton.svg",
+		"full_name": "Southampton Football Club",
+		"nicknames": ["The Saints"],
+		"founded": 1885,
+		"ground": "St Mary's Stadium",
+		"ground_capacity": 32383,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.southamptonfc.com/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Southampton_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#D10A11",
+				"title": "Red"
+			},
+			{
+				"hex": "#FFFFFF",
+				"title": "White"
 			},
 			{
 				"hex": "#000000",
-				"title": "third"
+				"title": "Black"
 			},
 			{
-				"hex": "#FFCD00",
-				"title": "fourth"
-			},
-			{
-				"hex": "#FFCD00",
-				"title": "fifth"
+				"hex": "#FCC200",
+				"title": "Orange"
 			}
 		]
 	},
 	{
-		"id": "3",
-		"title": "Chelsea",
-		"logo": "Chelsea.png",
-		"full_name": "Chelsea Football Club",
-		"nicknames": ["The Blues", "The Pensioners"],
-		"founded": 1905,
-		"ground": "Stamford Bridge",
-		"ground_capacity": 42055,
+		"id": "tottenham-hotspur",
+		"title": "Tottenham Hotspur",
+		"logo": "tottenham-hotspur.svg",
+		"full_name": "Tottenham Hotspur Football Club",
+		"nicknames": ["The Lilywhites"],
+		"founded": 1882,
+		"ground": "Tottenham Hotspur Stadium",
+		"ground_capacity": 62850,
 		"league": "Premier League",
 		"links": [
 			{
-				"url": "http://www.arsenal.com",
-				"title": "website"
+				"url": "https://www.tottenhamhotspur.com/",
+				"title": "Website"
 			},
 			{
-				"url": "https://twitter.com/Arsenal",
-				"title": "twitter"
-			},
-			{
-				"url": "https://www.facebook.com/Arsenal",
-				"title": "facebook"
-			},
-			{
-				"url": "https://www.instagram.com/arsenal/",
-				"title": "instagram"
-			},
-			{
-				"url": "https://www.youtube.com/user/Arsenal",
-				"title": "youtube"
+				"url": "https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C.",
+				"title": "Wikipedia"
 			}
 		],
 		"colors": [
 			{
-				"hex": "#034694",
-				"title": "home"
+				"hex": "#131F53",
+				"title": "Blue"
+			}
+		]
+	},
+	{
+		"id": "west-ham-united",
+		"title": "West Ham United",
+		"logo": "west-ham-united.svg",
+		"full_name": "West Ham United Football Club",
+		"nicknames": ["The Irons", "The Hammers"],
+		"founded": 1895,
+		"ground": "London Stadium",
+		"ground_capacity": 62500,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.whufc.com/",
+				"title": "Website"
 			},
 			{
-				"hex": "#FFFFFF",
-				"title": "away"
+				"url": "https://en.wikipedia.org/wiki/West_Ham_United_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#7C2C3B",
+				"title": "Maroon"
 			},
 			{
-				"hex": "#1f1f1f",
-				"title": "third"
+				"hex": "#F8D742",
+				"title": "Yellow"
 			},
 			{
-				"hex": "#C8102E",
-				"title": "fourth"
+				"hex": "#2BAEE5",
+				"title": "Blue"
+			}
+		]
+	},
+	{
+		"id": "worverhampton-wanderers",
+		"title": "Wolverhampton Wanderers",
+		"logo": "worverhampton-wanderers.svg",
+		"full_name": "Wolverhampton Wanderers Football Club",
+		"nicknames": ["Wolves", "The Wanderers"],
+		"founded": 1877,
+		"ground": "Molineux Stadium",
+		"ground_capacity": 32050,
+		"league": "Premier League",
+		"links": [
+			{
+				"url": "https://www.wolves.co.uk/",
+				"title": "Website"
+			},
+			{
+				"url": "https://en.wikipedia.org/wiki/Wolverhampton_Wanderers_F.C.",
+				"title": "Wikipedia"
+			}
+		],
+		"colors": [
+			{
+				"hex": "#F9A01B",
+				"title": "Orange"
+			},
+			{
+				"hex": "#000000",
+				"title": "Black"
 			}
 		]
 	}
