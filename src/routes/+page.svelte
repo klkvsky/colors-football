@@ -107,15 +107,15 @@
 
 			{#if serachResult.length > 0 && searchQuery.length > 2}
 				<div
-					class={`absolute top-[85%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] h-fit bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top px-[8px] flex flex-col text-left overflow-hidden text-[14px] font-black z-[100] shadow-md  ${
+					class={`absolute top-[85%] left-0 w-[calc(100%+1.2px)] -translate-x-[.6px] max-h-[260px] overflow-scroll no-scrollbar bg-white border-[0.6px] border-[#360D3A29] border-t-transparent rounded-b-[10px] origin-top px-[8px] flex flex-col text-left text-[14px] font-black z-[100] shadow-md  ${
 						isSearchOpen
 							? 'max-h-[calc(2ch+24px+8)] delay-200 opacity-100'
 							: 'max-h-[0px]  pointer-events-none opacity-0'
 					}`}
 				>
 					<!-- <div class="w-full h-[0.6px] bg-neutral-300 mt-[8px] opacity-0" /> -->
-					{#each serachResult.slice(0, 4) as result, index}
-						<div class={`ml-[50px] w-[calc(100%-58px)] h-[0.6px] bg-neutral-300`} />
+					{#each serachResult as result}
+						<div class={`ml-[50px] min-w-[calc(100%-58px)] min-h-[0.6px] bg-neutral-300`} />
 						<a href={result.id} class="flex flex-row items-center gap-[12px] py-[6px]">
 							<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
 								<img

@@ -46,7 +46,11 @@
 		<div
 			class="bg-neutral-100 w-full aspect-video border-[.6px] border-neutral-300 rounded-[10px] grid place-items-center lg:max-w-[840px] lg:mx-auto"
 		>
-			<img src={`./logos/${item.logo}`} alt="" class="w-1/3 h-auto max-h-[350px]" />
+			<img
+				src={`./logos/${item.logo}`}
+				alt=""
+				class="w-1/3 h-auto max-h-[150px] md:max-h-[250px] lg:max-h-[300px]"
+			/>
 		</div>
 
 		<div
