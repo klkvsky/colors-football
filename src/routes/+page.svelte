@@ -114,7 +114,7 @@
 					}`}
 				>
 					<!-- <div class="w-full h-[0.6px] bg-neutral-300 mt-[8px] opacity-0" /> -->
-					{#each serachResult as result, index}
+					{#each serachResult.slice(0, 4) as result, index}
 						<div class={`ml-[50px] w-[calc(100%-58px)] h-[0.6px] bg-neutral-300`} />
 						<a href={result.id} class="flex flex-row items-center gap-[12px] py-[6px]">
 							<div class=" rounded-full grid place-items-center w-[40px] aspect-square">
@@ -130,8 +130,12 @@
 									{#if isColorSpeicif && searchQuery.length > 2}
 										<span class="text-[#360D3A]">{result.title}</span>
 										<span class="text-[#360D3A] capitalize">
-											{result.colors.find((color) => color.title.includes(searchQuery)) &&
-												result.colors.find((color) => color.title.includes(searchQuery)).title}
+											{result.colors.find((color) =>
+												color.title.toLowerCase().includes(searchQuery.toLowerCase())
+											) &&
+												result.colors.find((color) =>
+													color.title.toLowerCase().includes(searchQuery.toLowerCase())
+												).title}
 											<span class="hidden"> yo </span>
 										</span>
 									{:else}
@@ -188,7 +192,7 @@
 								selectedLeague != 'All' ? selectedLeague.split(' ')[0] : 'All'
 							}.svg`}
 							alt={selectedLeague}
-							class="w-[25px] h-[25px] object-contain"
+							class="w-[20px] h-[20px] object-contain"
 						/>
 					</div>
 

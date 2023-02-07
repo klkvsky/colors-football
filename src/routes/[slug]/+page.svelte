@@ -46,7 +46,7 @@
 		<div
 			class="bg-neutral-100 w-full aspect-video border-[.6px] border-neutral-300 rounded-[10px] grid place-items-center lg:max-w-[840px] lg:mx-auto"
 		>
-			<img src={`./logos/${item.logo}`} alt="" class="w-1/3 h-auto" />
+			<img src={`./logos/${item.logo}`} alt="" class="w-1/3 h-auto max-h-[350px]" />
 		</div>
 
 		<div
@@ -72,6 +72,9 @@
 			</p>
 			<p class="font-bold text-[16px] text-neutral-600 lg:pr-[24px]">
 				Capacity: <span class="text-neutral-900"> {item?.ground_capacity.toLocaleString()} </span>
+			</p>
+			<p class="font-bold text-[16px] text-neutral-600 lg:pl-[24px]">
+				League: <span class="text-neutral-900"> {item?.league} </span>
 			</p>
 
 			{#if item.links}
