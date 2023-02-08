@@ -50,6 +50,11 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Colors Football</title>
+	<meta name="description" content="Colors Football" />
+</svelte:head>
+
 <div class="w-full">
 	<nav
 		class="flex flex-col gap-[16px] mt-[32px] sm:flex-row items-center lg:max-w-[840px] lg:mx-auto"

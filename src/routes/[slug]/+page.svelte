@@ -41,6 +41,13 @@
 	}
 </script>
 
+<svelte:head>
+	<title>{item?.full_name} | Colors Football</title>
+	<meta name="description" content="Colors Football" />
+	<meta name="keywords" content="Colors Football" />
+	<meta name="author" content="Colors Football" />
+</svelte:head>
+
 {#if item}
 	<main class="pt-[32px] flex flex-col gap-[16px]">
 		<div

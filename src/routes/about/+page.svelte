@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>About | Colors Football</title>
+	<meta name="description" content="About | Colors Football" />
+</svelte:head>
+
 <div
 	class="flex flex-col gap-[16px] mt-[32px] sm:flex-row items-center lg:min-w-[840px] lg:max-w-[840px] lg:mx-auto flex-wrap"
 >
